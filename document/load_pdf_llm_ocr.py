@@ -2,7 +2,6 @@
 #Tesseract-OCR
 #poppler-24.08.0
 
-
 import fitz  # PyMuPDF 
 from pdf2image import convert_from_path 
 import pytesseract 
@@ -36,6 +35,7 @@ for image in images:
     image.save(image_path+str(index)+".png", "PNG")
     # 使用OCR提取文字 
     ocr_text = pytesseract.image_to_string(image,  lang='chi_sim')
+    print(ocr_text)
     images_text += ocr_text + "\n"
     index+=1
 

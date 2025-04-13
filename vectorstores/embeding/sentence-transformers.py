@@ -3,7 +3,7 @@ from langchain_huggingface import HuggingFaceEmbeddings
 model_name = "sentence-transformers/all-MiniLM-L6-v2"
 embeddings_model  = HuggingFaceEmbeddings(model_name=model_name)
 embeddings=[]
-embeddings.append(embeddings_model.embed_query("你是sb"))
+embeddings.append(embeddings_model.embed_query("你是学生"))
 embeddings.append(embeddings_model.embed_query("你是帅哥"))
 embeddings.append(embeddings_model.embed_query("我是帅哥"))
 
